@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assi4.js"></script> <link rel="stylesheet" href="style10.css">
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+
+    <h2>JavaScript Task Runner</h2>
+    
+    <button onclick="runEvenOdd()">Check Even/Odd</button>
+    <button onclick="runMultiplicationTable()">Multiplication Table</button>
+    <button onclick="runFizzBuzz()">FizzBuzz</button>
+    <button onclick="runTriangle()">Print Triangle</button>
+
+    <script>
+        function checkEvenOdd(num) {
+            if (num % 2 === 0) {
+                alert(`${num} is an even number.`);
+            } else {
+                alert(`${num} is an odd number.`);
+            }
+        }
+
+        function runEvenOdd() {
+            let number = prompt("Enter a number:");
+            checkEvenOdd(parseInt(number));
+        }
+
+        function multiplicationTable(num) {
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                output += `${num} x ${i} = ${num * i}\n`;
+            }
+            alert(output);
+        }
+
+        function runMultiplicationTable() {
+            let num = prompt("Enter a number for the multiplication table:");
+            multiplicationTable(parseInt(num));
+        }
+
+        function fizzBuzz() {
+            let output = "";
+            for (let i = 1; i <= 20; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    output += "FizzBuzz\n";
+                } else if (i % 3 === 0) {
+                    output += "Fizz\n";
+                } else if (i % 5 === 0) {
+                    output += "Buzz\n";
+                } else {
+                    output += `${i}\n`;
+                }
+            }
+            alert(output);
+        }
+
+        function runFizzBuzz() {
+            fizzBuzz();
+        }
+
+        function printTriangle(n) {
+            let pattern = "";
+            for (let i = 1; i <= n; i++) {
+                pattern += "*".repeat(i) + "\n";
+            }
+            alert(pattern);
+        }
+
+        function runTriangle() {
+            let rows = prompt("Enter the number of rows for the triangle:");
+            printTriangle(parseInt(rows));
+        }
+    </script>
+
+</body>
+</html>

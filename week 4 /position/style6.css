@@ -1,0 +1,34 @@
+.container {
+    width: 600px; 
+    height: 500px;
+    background-color: pink;
+    position: relative;
+}
+.box {
+    width: 50px;
+    height: 50 px;
+    background-color: lightblue;
+    margin: 10px; 
+}
+.box-1 {
+    position: sticky;
+    top: 50px;
+    /* left: 50px;  */
+    /* bottom: 20px; */
+    /* right: 50px; */
+}
+body{
+    height: 800px;
+}
+ .box-2{ 
+    position: absolute; 
+    top: 50px; 
+    left: 80px; 
+    bottom: 0; 
+} 
+.fixed{
+    background-color: rgb(240, 240, 213);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

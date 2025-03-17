@@ -1,0 +1,28 @@
+// Handle login form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting normally
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Simple authentication (you can expand this logic to check with a backend)
+  if (username === 'user' && password === 'password') {
+    // Hide login form and show user page
+    document.getElementById('login-container').hidden = true;
+    document.getElementById('user-page').hidden = false;
+    document.getElementById('user-name').textContent = username;
+  } else {
+    alert('Invalid username or password');
+  }
+});
+
+// Handle logout
+function logout() {
+  // Hide user page and show login form
+  document.getElementById('user-page').hidden = true;
+  document.getElementById('login-container').hidden = false;
+
+  // Clear the username field
+  document.getElementById('username').value = '';
+  document.getElementById('password').value = '';
+}
