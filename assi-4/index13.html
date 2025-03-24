@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #f09999;
+            display: inline-block;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+        pre {
+            text-align: left;
+            background: #772828;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Even or Odd Checker -->
+    <div class="container">
+        <h2>Even or Odd Checker</h2>
+        <input type="number" id="numInput" placeholder="Enter a number">
+        <button onclick="checkEvenOdd()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <!-- Multiplication Table Generator -->
+    <div class="container">
+        <h2>Multiplication Table</h2>
+        <input type="number" id="tableInput" placeholder="Enter a number">
+        <button onclick="generateTable()">Generate</button>
+        <pre id="tableOutput"></pre>
+    </div>
+
+    <!-- FizzBuzz Challenge -->
+    <div class="container">
+        <h2>FizzBuzz Challenge</h2>
+        <button onclick="fizzBuzz()">Run FizzBuzz</button>
+        <pre id="fizzBuzzOutput"></pre>
+    </div>
+
+    <!-- Right-Angled Triangle -->
+    <div class="container">
+        <h2>Right-Angled Triangle</h2>
+        <input type="number" id="triangleInput" placeholder="Enter rows (n)">
+        <button onclick="printTriangle()">Print Triangle</button>
+        <pre id="triangleOutput"></pre>
+    </div>
+
+    <script>
+        // Even or Odd Checker
+        function checkEvenOdd() {
+            let num = document.getElementById("numInput").value;
+            if (num === "") {
+                document.getElementById("result").innerText = "Please enter a number.";
+                console.log("Please enter a number.");
+                return;
+            }
+            num = parseInt(num);
+            let result;
+            if (num % 2 === 0) {
+                result = `${num} is an even number.`;
+            } else {
+                result = `${num} is an odd number.`;
+            }
+            document.getElementById("result").innerText = result;
+            console.log(result);
+        }
+
+        // Multiplication Table Generator
+        function generateTable() {
+            let num = document.getElementById("tableInput").value;
+            if (num === "") {
+                document.getElementById("tableOutput").innerText = "Please enter a number.";
+                console.log("Please enter a number.");
+                return;
+            }
+            num = parseInt(num);
+            let output = "";
+            for (let i = 1; i <= 10; i++) {
+                output += `${num} x ${i} = ${num * i}\n`;
+            }
+            document.getElementById("tableOutput").innerText = output;
+            console.log(output);
+        }
+
+        // FizzBuzz Challenge
+        function fizzBuzz() {
+            let output = "";
+            for (let i = 1; i <= 20; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    output += "FizzBuzz\n";
+                } else if (i % 3 === 0) {
+                    output += "Fizz\n";
+                } else if (i % 5 === 0) {
+                    output += "Buzz\n";
+                } else {
+                    output += i + "\n";
+                }
+            }
+            document.getElementById("fizzBuzzOutput").innerText = output;
+            console.log(output);
+        }
+
+        // Right-Angled Triangle
+        function printTriangle() {
+            let n = document.getElementById("triangleInput").value;
+            if (n === "") {
+                document.getElementById("triangleOutput").innerText = "Please enter a number.";
+                console.log("Please enter a number.");
+                return;
+            }
+            n = parseInt(n);
+            let output = "";
+            for (let i = 1; i <= n; i++) {
+                output += "*".repeat(i) + "\n";
+            }
+            document.getElementById("triangleOutput").innerText = output;
+            console.log(output);
+        }
+    </script>
+
+</body>
+</html>

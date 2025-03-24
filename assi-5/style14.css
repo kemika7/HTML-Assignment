@@ -1,0 +1,201 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5; /* Light gray background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  max-width: 600px;
+  background-color: #ffffff; /* White background for the container */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4a4a4a; /* Light dark color for title */
+}
+
+/* Add Task Button */
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: #80d0ff; /* Light blue */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #5cb8ff; /* Slightly darker blue */
+}
+
+.btn-warning {
+  background-color: #ffe57f; /* Soft yellow */
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background-color: #ffd15c; /* Slightly darker yellow */
+}
+
+.btn-danger {
+  background-color: #ff8a80; /* Soft red */
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #ff6f61; /* Slightly darker red */
+}
+
+/* Task List Styling */
+#task-list {
+  margin-top: 30px;
+}
+
+.list-group-item {
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f9f9f9; /* Light gray background for tasks */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item h5 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.list-group-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.list-group-item .task-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-start;
+}
+
+.list-group-item .task-buttons button {
+  margin-top: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item .task-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background-color: #80d0ff; /* Light blue */
+  color: white;
+}
+
+.modal-header .btn-close {
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.modal-footer {
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+}
+
+.modal-footer .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Form Inputs */
+.form-control {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.form-control:focus {
+  border-color: #80d0ff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+}

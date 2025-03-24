@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style14.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Todo App</h1>
+    <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#taskModal">Add Task</button>
+
+    <!-- Task List -->
+    <ul id="task-list" class="list-group mt-3"></ul>
+    
+    <!-- Modal for Adding/Editing Task -->
+    <div class="modal" tabindex="-1" role="dialog" id="taskModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title">Add Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="task-title">Task Title</label>
+              <input type="text" class="form-control" id="task-title" placeholder="Task title">
+            </div>
+            <div class="form-group">
+              <label for="task-description">Description</label>
+              <textarea class="form-control" id="task-description" placeholder="Task description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="task-due-date">Due Date</label>
+              <input type="date" class="form-control" id="task-due-date">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="save-task-btn">Save Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>
