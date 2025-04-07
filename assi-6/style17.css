@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    padding: 50px;
+    margin: 0;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Container to wrap everything neatly */
+  .container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Add this for center alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  
+  /* Color Box */
+  #colorBox {
+    width: 250px;
+    height: 250px;
+    background-color: #3498db;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 20px auto; /* Center horizontally */
+  }  
+  
+  /* Input and Button */
+  #colorPicker,
+  #resetBtn {
+    padding: 16px 22px;
+    font-size: 18px;
+    margin-right: 0px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  margin-top: 12px; /* 👈 Push it slightly down */
+  display: block;
+  }
+  
+  /* Color Picker */
+  #colorPicker {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reset Button */
+  #resetBtn {
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  }
+  
+  /* Button Hover Effects */
+  #colorPicker:hover,
+  #resetBtn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
